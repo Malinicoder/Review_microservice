@@ -3,12 +3,6 @@ from datetime import timedelta
 
 class Config:
     
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Root@localhost:5432/postgres'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Root@localhost:5432/Review'
 
-  
-    JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "secret-key")  
-    JWT_ACCESS_TOKEN_EXPIRES = timedelta(hours=1) 
-    JWT_ALGORITHM = "HS256"
-
-    SECRET_KEY = os.getenv("SECRET_KEY", "secret-key")
+    LOG_FILE = os.path.join("logs", "reviews.log") 
